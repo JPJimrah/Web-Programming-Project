@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Autonomous Delivery Robot",
+      "date": "Current",
+      "category": "Robotics",
+      "description": "An Arduino-based indoor delivery robot with two trays, obstacle avoidance, and a Bluetooth-controlled mobile app.",
+      "image_url": "assets/images/delivery-robot.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Growth Mentorship Programme",
+      "date": "2026",
+      "category": "Mentorship",
+      "description": "Participation in the Growth Mentorship Programme 2026, organized by NICHUB Capacity Development Center.",
+      "image_url": "assets/images/mentorship.jpg"
+    },
+    {
+      "id": 3,
+      "title": "IoT-Based Smart Tomato Irrigation System",
+      "date": "2026",
+      "category": "Internet of Things",
+      "description": "A group project using Arduino Uno, ESP8266, and soil sensors to automate irrigation.",
+      "image_url": "assets/images/smart-irrigation.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Guidance and Counseling App",
+      "date": "2025",
+      "category": "Mobile App",
+      "description": "A group project completed as part of the requirements for an undergraduate course.",
+      "image_url": "assets/images/guidance-app.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Personal Portfolio Website",
+      "date": "2023",
+      "category": "Web Development",
+      "description": "A personal project created to test and develop web development skills.",
+      "image_url": "assets/images/portfolio.jpg"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Peace Nursery/Primary School, Maryam, Tafawa Balewa",
+      "start_date": "2002-08",
+      "end_date": "2011-07",
+      "qualification": "Primary education",
+      "description": "A mission school by Church of Christ in Nations (COCIN), Local Church Council (LCC) Maryam, RCC Tafawa Balewa, Bauchi State."
+    },
+    {
+      "id": 2,
+      "institution": "COCIN Metropolitan Unity Secondary School, Tafawa Balewa LGA",
+      "start_date": "2011-08",
+      "end_date": "2017-07",
+      "qualification": "Secondary education",
+      "description": "A mission school by Church of Christ in Nations (COCIN), Regional Church Council (RCC) Tafawa Balewa, Bauchi State."
+    },
+    {
+      "id": 3,
+      "institution": "Ahmadu Bello University, Zaria",
+      "start_date": "2020-01",
+      "end_date": "2026-10",
+      "qualification": "Bachelor of Engineering in Computer Engineering",
+      "description": "Final-year student currently building an autonomous delivery robot."
+    }
+  ]
+}
