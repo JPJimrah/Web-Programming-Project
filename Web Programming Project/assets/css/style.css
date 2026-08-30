@@ -1,0 +1,598 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222222;
+  background: #f4faf6;
+}
+
+body > header,
+body > nav,
+body > main,
+body > footer {
+  width: 100%;
+}
+
+body > main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body > nav {
+  order: -1;
+}
+
+body > main {
+  order: 1;
+}
+
+body > .project-modal {
+  order: 2;
+}
+
+body > footer {
+  order: 3;
+}
+
+header {
+  padding: 2.5rem 1.25rem;
+  color: #ffffff;
+  text-align: center;
+  background: #0a4d2c;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+header p {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+}
+
+.profile-image {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.25rem;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav {
+  padding: 0.9rem 1.25rem;
+  background: #0a4d2c;
+}
+
+main {
+  padding: 0;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem;
+  color: #ffffff;
+  text-align: center;
+  background: #0a4d2c;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  text-decoration: underline;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  padding: 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+.project-card > img,
+.modal-panel > img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  background: #e6f4ea;
+}
+
+.project-id,
+.project-date {
+  margin: 0.25rem 0;
+}
+
+.project-id {
+  color: #0a4d2c;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-group {
+  padding: 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+.skill-group h3 {
+  margin-top: 0;
+}
+
+.skill-group ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.interest-card {
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+.interest-card h3,
+.interest-card p:not(.interest-image) {
+  margin-right: 1.25rem;
+  margin-left: 1.25rem;
+}
+
+.interest-image {
+  display: grid;
+  min-height: 130px;
+  place-items: center;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.interest-iot {
+  background: #0a4d2c;
+}
+
+.interest-learning {
+  background: #7c5c32;
+}
+
+.interest-robotics {
+  background: #075985;
+}
+
+.interest-reading {
+  background: #6b3f75;
+}
+
+.interest-teaching {
+  background: #9a3412;
+}
+
+
+.form-notice {
+  padding: 1rem;
+  border-left: 4px solid #c9a227;
+  background: #f4faf6;
+}
+
+.cv-page {
+  padding: 0 1.25rem 2rem;
+  background: #ffffff;
+}
+
+.cv-header {
+  padding: 1.5rem 0;
+  color: #222222;
+  text-align: left;
+  background: transparent;
+}
+
+.cv-header h2 {
+  margin: 0 0 0.25rem;
+  border: 0;
+  color: #0a4d2c;
+}
+
+.cv-header address {
+  font-style: normal;
+}
+
+.cv-section {
+  margin: 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid #cbd5e1;
+}
+
+.cv-section h2 {
+  margin-bottom: 0.5rem;
+  border: 0;
+  color: #0a4d2c;
+  font-size: 1.15rem;
+}
+
+.cv-entry {
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.cv-entry h3,
+.cv-entry p {
+  margin: 0.15rem 0;
+}
+
+.project-category {
+  margin: 0 0 0.5rem;
+  color: #075985;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #ffffff;
+  background: #075985;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #0c4a6e;
+}
+
+.project-modal {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background: rgb(15 23 42 / 0.72);
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.project-modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-panel {
+  position: relative;
+  width: min(100%, 560px);
+  padding: 2rem;
+  color: #1f2937;
+  background: #ffffff;
+  box-shadow: 0 1rem 3rem rgb(15 23 42 / 0.25);
+  transform: translateY(1rem);
+  transition: transform 0.25s ease;
+}
+
+.project-modal:target .modal-panel {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  color: #475569;
+  font-size: 1.75rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  color: #0f172a;
+}
+
+main > section,
+main > article,
+main > aside {
+  margin: 0;
+  padding: 2.5rem 1.25rem;
+}
+
+main article,
+main > section:not(.project-grid) {
+  border-left: 0;
+  background: #ffffff;
+}
+
+main > section:nth-child(even),
+main > article:nth-child(even) {
+  background: #e6f4ea;
+}
+
+main h2,
+main h3 {
+  color: #0a4d2c;
+}
+
+main h2 {
+  margin-top: 0;
+  border-bottom: 3px solid #0b6e3f;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+main dl {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr);
+  margin: 0;
+}
+
+main dt,
+main dd {
+  padding: 0.65rem;
+  border-bottom: 1px solid #dbe5df;
+}
+
+main dt {
+  color: #0a4d2c;
+  font-weight: 700;
+}
+
+main dd {
+  margin: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+caption {
+  margin-bottom: 0.75rem;
+  color: #0a4d2c;
+  font-weight: 700;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #ffffff;
+  background: #0a4d2c;
+}
+
+tbody tr:nth-child(even) {
+  background: #e6f4ea;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 4px solid #c9a227;
+  background: #f4faf6;
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  color: #0b6e3f;
+  font-style: normal;
+  font-weight: 700;
+}
+
+figure {
+  display: inline-block;
+  width: calc(50% - 0.75rem);
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  vertical-align: top;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+form fieldset {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+}
+
+form p {
+  margin: 0;
+}
+
+label {
+  color: #0a4d2c;
+  font-weight: 700;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.65rem;
+  border: 1px solid #94a3b8;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  color: #ffffff;
+  background: #0a4d2c;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: #0b6e3f;
+}
+
+@media (max-width: 700px) {
+  nav ul {
+    gap: 0.5rem 0.75rem;
+  }
+
+  main dl {
+    grid-template-columns: 1fr;
+  }
+
+  main dt {
+    padding-bottom: 0.15rem;
+    border-bottom: 0;
+  }
+
+  main dd {
+    padding-top: 0.15rem;
+  }
+
+  figure {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 1.2cm;
+}
+
+@media print {
+  body {
+    display: block;
+    min-height: auto;
+    color: #000000;
+    background: #ffffff;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  body > header,
+  body > nav,
+  body > footer,
+  .project-modal {
+    display: none;
+  }
+
+  body > main.cv-page {
+    display: block;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .cv-header {
+    display: block;
+    padding: 0 0 0.4rem;
+    border-bottom: 2px solid #000000;
+  }
+
+  .cv-header h2,
+  .cv-section h2,
+  main h3 {
+    color: #000000;
+  }
+
+  .cv-header h2 {
+    margin: 0;
+    font-size: 18pt;
+  }
+
+  .cv-section {
+    padding: 0.35rem 0;
+    border-top: 1px solid #777777;
+    break-inside: avoid;
+  }
+
+  .cv-section h2 {
+    margin: 0 0 0.2rem;
+    font-size: 11pt;
+  }
+
+  .cv-entry {
+    break-inside: avoid;
+  }
+
+  .cv-entry h3,
+  .cv-entry p,
+  .cv-section p {
+    margin: 0.1rem 0;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
